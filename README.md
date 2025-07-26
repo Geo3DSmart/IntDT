@@ -1,7 +1,7 @@
-# Int2sec: A Large-scale Roadside Dual-Lidar Dataset
+# IntDT: A Large-scale Roadside Dual-Lidar Dataset
 
 
-This is the official implementation of the Int2sec dataset, a large-scale roadside dual-lidar dataset.
+This is the official implementation of the IntDT dataset, a large-scale roadside dual-lidar dataset.
 
 ## Overview
 - [Data Download](#Data-Download)
@@ -14,7 +14,7 @@ This is the official implementation of the Int2sec dataset, a large-scale roadsi
 Our dataset is freely available to researchers. Please download and sign our [agreement](https://docs.google.com/document/d/14ufBczTjLYnxm5bWkFROsz9FYEugZ2QL/edit?usp=sharing&ouid=110390481963822269546&rtpof=true&sd=true) and send it to the provided email address (wen.xiao@cug.edu.cn). You will receive the download link within one week.
 After downloading the data, please put the data in the following structure:
 ```shell
-├── Int2sec-S-dataset
+├── IntDT-S-dataset
 │   ├── 0011
 |      |── label
 |      |── lidar
@@ -23,7 +23,7 @@ After downloading the data, please put the data in the following structure:
 │   ├── 0021
 │   ├── 0022
 │   ├── ...
-├── Int2sec-D-dataset
+├── IntDT-D-dataset
 │   ├── 001
 |      |── Lidar1
 |         |── label
@@ -44,7 +44,7 @@ After downloading the data, please put the data in the following structure:
 
 ### 3D Object Detection
 
-#### Results of detection models on the Int2sec-D validation set.
+#### Results of detection models on the IntDT-D validation set.
 <table>
   <tr>
     <th rowspan="2">Method</th>
@@ -119,7 +119,7 @@ After downloading the data, please put the data in the following structure:
   </tr>
 </table>
 
-#### Results of detection models on the Int2sec-D test set.
+#### Results of detection models on the IntDT-D test set.
 <table>
   <tr>
     <th rowspan="2">Method</th>
@@ -198,7 +198,7 @@ After downloading the data, please put the data in the following structure:
 
 ### 3D Object Tracking
 
-#### Results of 3D Object Tracking models on the Int2sec-S validation set.
+#### Results of 3D Object Tracking models on the IntDT-S validation set.
 
 <table>
     <tr>
@@ -225,7 +225,7 @@ After downloading the data, please put the data in the following structure:
     </tr>
 </table>
 
-#### Results of 3D Object Tracking models on the Int2sec-S test set.
+#### Results of 3D Object Tracking models on the IntDT-S test set.
 
 <table>
     <tr>
