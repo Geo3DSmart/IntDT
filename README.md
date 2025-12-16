@@ -1,12 +1,5 @@
 # IntDT: A Large-scale Roadside Dual-Lidar Dataset
 
-This project contains the official implementation of the IntDT dataset—a large-scale roadside dual-LiDAR dataset proposed in the paper.
-[IntDT: A comprehensive roadside dual-lidar dataset and benchmarks for urban intersection digital twins](https://pdf.sciencedirectassets.com/272637/1-s2.0-S1569843224X20166/1-s2.0-S1569843225006272/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCXVzLWVhc3QtMSJGMEQCICDUL8a1tmZYXcLrhkPq5MHElWWyv3IOJzMqsMQIbDT2AiAY8ptmTJ2AJM52Mzx9uvwYOkfk1Id%2BVxMcmwpsX5KhBCqzBQgQEAUaDDA1OTAwMzU0Njg2NSIMEGJ0JlLSsXYU%2ByldKpAFBuwLFf221HFlrv8L7%2BFFAxyRsbgNt6lUsasa%2FNXruiHALA1Yr5gHn2%2BDiZBZfPnZrZ%2Bi%2BxOEc8X%2BYGuyNGRMyAE3dAF4rTO5WzQs%2FFk07cS8n%2FxAUsV0B1O3UMtgMsQCXUzjfNHVQgT%2FkP%2FaN7Ces412Fsj24xOqmSwRYFPBIMz1HhTU6a%2FIc2daYr8PadtH2yfdBVrQ3UlHaxjzvKMk7biw7LxEolscB7d3mdZr4EqPooyy4fNVXlM3uuax9CG7N%2BHmF11VnZOK5TMyB78AsPZp%2FBJxpME4hiJM0ttgSZuiDxWNVHSn1CG1COgqf%2FlHtOwfk5keprg2CbkWE%2FAO9Y9Gp1KgbOB7n0QcI0wyMp77GU13PIVPpjZ%2BZLufQEa6%2FkA73AJCczSmiKPI4VCFSK20BiEOgJbEwwpKlFesyoWvEnw0a%2FFX1UqUVm3Y3QdBX0MYqBshB1Zpj03GXWcqa%2BBypKRaH%2BBnsANLVOOW0KxzF%2BpC7Y1ZKrLHoRgonWuwkie8jtl3dpom%2BziC2pQGkvISK7KttR1i1BM4YTbFCDM8f8SCk1ReVzhkjOhnLNxWNoWBCy9PPXOrK4rWIYkdgub6bCV1kMG7n0kc%2F75dAuu8c96r%2FABRVvbBbh%2B5xEgH1h%2BBx2R9jJSuH7BsUhjhLejaPFiYXPELKppfsPs%2FOCPdQ4q3f2swuYOMqkGRcj7fhAFlQ7ZOM99%2Fst%2FLVCPxs1mRd1ooAQjrX0cvi3WnnC6aqcONJp%2FUA%2B7tqF2i1K3XUNEImhvK%2B5VPkIpyllJt02kGKpGYuGnBSOEs9rvWMu%2FROIl9gg1XYtPqc5dWGIM2DsGlxEvrxf369mOenm3YuB5TrCNE69lKtVwHlMGb0fswjqS6yQY6sgFqYE2ZDmhwiXrNuOznPOrgrR5vlCyZ6OzpQtKF0Nyprr6MW9X4kIpXxnSIMtXtr6KPWqOb07uIWoSxFUhLKtE03knCrSoUAiIuzvTA3rfXG2%2Fl0LaLTHPs%2BotoHMAVD52XGGUQB%2FJ9A4pKodqSZaRYBzjfJqG4rsg4nK9pOdGi0drMfCAz%2BwZJFOjdgBc%2BVqJMdnCv%2BA9XqGd0cN%2FaJYucvLY6TwrdZG2UDs%2Fqv0Twh27t&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251202T074637Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYQHUIJ4KV%2F20251202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8dcef5a9b1c0fda1b1f0f86c9d3078b5b20927c8e2da87c3dbb19ae144e91322&hash=46c4806e7fae98c2d7d3fea871a00e7d6961c8c211bd0625a5d05f927d290d98&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1569843225006272&tid=spdf-1d874d96-03ea-4f16-a29c-e13a0b12396a&sid=8b254d133a437240bd7bdd375e021ef2c038gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0a0e5804555f525157&rr=9a7936275c06b445&cc=hk&kca=eyJrZXkiOiJkSHZjV2k4a0UyLzRGRFFPZFByNTB0cXl1WHFDOVRUWG1lZTZtb0M2THJ6dHpySUlHclRydkp2b01mcDErYkhVenNIdHk1Rk9mRXlId1ExTmVvb3FLYTFubGlobysweVVHT1luN0p2V29ENGlBMVBMMlFwRGdZaXZ1cVZuTXIxQnlYTXFpY0svV0t2bUlwMjRyWTA1YW0zU0hxb1d0bUQwTkk4bzFLT3NXc05mUE9vPSIsIml2IjoiZWFiNTQxNzg0MDkzYmJiMTMwMTA5MjYwYWE2M2E1Y2IifQ==_1764661614539)
-
-Wen Xiao, Dianyu Yu, Miao Tang, Shichen Zhang, Pu Zhao, Peiguang Li, Chengwen Song, Jiaxing Zhang, Nengcheng Chen
-
-[DOI:doi.org/10.1016/j.jag.2025.104980](doi.org/10.1016/j.jag.2025.104980)
-
 ## Overview
 - [Data Download](#Data-Download)
 - [Benchmark](#Benchmark)
@@ -15,6 +8,7 @@ Wen Xiao, Dianyu Yu, Miao Tang, Shichen Zhang, Pu Zhao, Peiguang Li, Chengwen So
   - [3D Object Tracking](#3D-Object-Tracking)
   - [Moving object segmentation](#Moving-object-segmentation)
   - [Point cloud completion](#Point-cloud-completion)
+- [Citation](#Citation)
 - [Acknowledgment](#Acknowledgment)
 
 ## Data Download
@@ -497,8 +491,36 @@ After downloading the data, please put the data in the following structure:
   </tr>
 </table>
 
+## Citation
+
+If you find our work useful, please consider citing:
+
+```bibtex
+@article{xiao2025intdt,
+  title={IntDT: A comprehensive roadside dual-lidar dataset and benchmarks for urban intersection digital twins},
+  author={Xiao, Wen and Yu, Dianyu and Tang, Miao and Zhang, Shichen and Zhao, Pu and Li, Peiguang and Song, Chengwen and Zhang, Jiaxing and Chen, Nengcheng},
+  journal={International Journal of Applied Earth Observation and Geoinformation},
+  volume={145},
+  pages={104980},
+  year={2025},
+  publisher={Elsevier},
+  doi={10.1016/j.jag.2025.104980},
+}
+
+```
+
 ## Acknowledgment
-- [OpenPCDet](https://github.com/open-mmlab/OpenPCDet)
-- [SUSTechPOINTS](https://github.com/naurril/SUSTechPOINTS)
+
+- [IA-SSD](https://github.com/yifanzhang713/IA-SSD?utm_source=chatgpt.com)
+- [PV-RCNN](https://github.com/open-mmlab/OpenPCDet)
+- [CenterPoint](https://github.com/tianweiy/CenterPoint)
+- [CoIn](https://github.com/xmuqimingxia/CoIn)
+- [HINTED](https://github.com/xmuqimingxia/HINTED)
+- [PC-TCNN](https://www.ijcai.org/proceedings/2021/0161.pdf)
+- [MotionSeg3D](https://github.com/haomo-ai/MotionSeg3D)
+- [LMNet](https://github.com/PRBonn/LiDAR-MOS?utm_source=chatgpt.com)
+- [4DMOS](https://github.com/PRBonn/4DMOS)
+- [AdaPoinTr](https://github.com/yuxumin/PoinTr)
+- [ODGNet](https://github.com/corecai163/ODGNet)
 
 Sincere appreciation for their great contributions.
